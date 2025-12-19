@@ -11,7 +11,7 @@ function App() {
       {/* <StartScreen /> */}
       {/* <QuizScreen /> */}
       <ResultScreen />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

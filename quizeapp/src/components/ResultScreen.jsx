@@ -1,3 +1,11 @@
+import CupIcon from "./CupIcon";
+import ResultCard from "./ResultCard";
+
 export default function ResultScreen() {
-  return <main className=""></main>;
+  return (
+    <main className="flex flex-col items-center justify-center min-h-screen gap-8">
+      <CupIcon />
+      <ResultCard />
+    </main>
+  );
 }

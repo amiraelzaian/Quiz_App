@@ -11,7 +11,7 @@ export default function Theme() {
   return (
     <button
       onClick={toggleTheme}
-      className="absolute right-4 top-4 p-2 rounded-full 
+      className="fixed right-4 top-4 p-2 rounded-full 
                  bg-white/70 backdrop-blur shadow-md
                  hover:scale-105 transition-all duration-300"
     >
