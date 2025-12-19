@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "difficulty": "easy",
+    "question": "What is the capital of France?",
+    "options": ["Paris", "Rome", "Berlin", "Madrid"],
+    "answer": "Paris"
+  },
+  {
+    "id": 2,
+    "difficulty": "easy",
+    "question": "Which is the largest ocean in the world?",
+    "options": ["Atlantic", "Pacific", "Indian", "Arctic"],
+    "answer": "Pacific"
+  },
+  {
+    "id": 3,
+    "difficulty": "easy",
+    "question": "How many continents are there?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "7"
+  },
+  {
+    "id": 4,
+    "difficulty": "easy",
+    "question": "What is the official language of Brazil?",
+    "options": ["Portuguese", "Spanish", "English", "French"],
+    "answer": "Portuguese"
+  },
+  {
+    "id": 5,
+    "difficulty": "easy",
+    "question": "Which animal is known for its patience?",
+    "options": ["Lion", "Turtle", "Camel", "Elephant"],
+    "answer": "Camel"
+  },
+  {
+    "id": 6,
+    "difficulty": "easy",
+    "question": "What is the fastest land animal?",
+    "options": ["Cheetah", "Lion", "Horse", "Gazelle"],
+    "answer": "Cheetah"
+  },
+  {
+    "id": 7,
+    "difficulty": "easy",
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Mars", "Venus", "Jupiter", "Saturn"],
+    "answer": "Mars"
+  },
+  {
+    "id": 8,
+    "difficulty": "easy",
+    "question": "Which is the smallest continent?",
+    "options": ["Australia", "Europe", "Africa", "South America"],
+    "answer": "Australia"
+  },
+  {
+    "id": 9,
+    "difficulty": "easy",
+    "question": "How many colors are in a rainbow?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "7"
+  },
+  {
+    "id": 10,
+    "difficulty": "easy",
+    "question": "What is the largest sea animal?",
+    "options": ["Blue Whale", "Great White Shark", "Dolphin", "Octopus"],
+    "answer": "Blue Whale"
+  },
+  {
+    "id": 11,
+    "difficulty": "medium",
+    "question": "Who wrote the Harry Potter series?",
+    "options": [
+      "J.K. Rowling",
+      "Thomas Hardy",
+      "Ernest Hemingway",
+      "Leo Tolstoy"
+    ],
+    "answer": "J.K. Rowling"
+  },
+  {
+    "id": 12,
+    "difficulty": "medium",
+    "question": "Which country has the largest number of islands?",
+    "options": ["Indonesia", "Sweden", "Japan", "Philippines"],
+    "answer": "Indonesia"
+  },
+  {
+    "id": 13,
+    "difficulty": "medium",
+    "question": "What is the fastest bird in the world?",
+    "options": ["Peregrine Falcon", "Ostrich", "Nightingale", "Crow"],
+    "answer": "Peregrine Falcon"
+  },
+  {
+    "id": 14,
+    "difficulty": "medium",
+    "question": "What is the largest lake in the world?",
+    "options": ["Caspian", "Superior", "Victoria", "Michigan"],
+    "answer": "Caspian"
+  },
+  {
+    "id": 15,
+    "difficulty": "medium",
+    "question": "Who founded McDonald's?",
+    "options": ["Ray Kroc", "Steve Jobs", "Bill Gates", "Henry Ford"],
+    "answer": "Ray Kroc"
+  },
+  {
+    "id": 16,
+    "difficulty": "medium",
+    "question": "What is the longest river in the world?",
+    "options": ["Nile", "Amazon", "Yangtze", "Danube"],
+    "answer": "Nile"
+  },
+  {
+    "id": 17,
+    "difficulty": "medium",
+    "question": "What is the largest desert in the world?",
+    "options": [
+      "Sahara",
+      "Australian deserts",
+      "North American deserts",
+      "Asian deserts"
+    ],
+    "answer": "Sahara"
+  },
+  {
+    "id": 18,
+    "difficulty": "medium",
+    "question": "Which country invented paper?",
+    "options": ["China", "Greece", "Egypt", "Iraq"],
+    "answer": "China"
+  },
+  {
+    "id": 19,
+    "difficulty": "medium",
+    "question": "Who invented the telephone?",
+    "options": [
+      "Alexander Graham Bell",
+      "Thomas Edison",
+      "Nikola Tesla",
+      "Ben Franklin"
+    ],
+    "answer": "Alexander Graham Bell"
+  },
+  {
+    "id": 20,
+    "difficulty": "medium",
+    "question": "What is the largest inland body of water in the world?",
+    "options": ["Caspian", "Michigan", "Baikal", "Tahiti"],
+    "answer": "Caspian"
+  },
+  {
+    "id": 21,
+    "difficulty": "hard",
+    "question": "Who is the 20th-century poet known as 'Prince of Poets'?",
+    "options": ["Ahmed Shawqi", "Nizar Qabbani", "Mahmoud Darwish", "Said Akl"],
+    "answer": "Ahmed Shawqi"
+  },
+  {
+    "id": 22,
+    "difficulty": "hard",
+    "question": "Which country has the largest number of volcanoes?",
+    "options": ["Indonesia", "Japan", "Italy", "USA"],
+    "answer": "Indonesia"
+  },
+  {
+    "id": 23,
+    "difficulty": "hard",
+    "question": "Who discovered the law of gravity?",
+    "options": ["Isaac Newton", "Albert Einstein", "Galileo", "Archimedes"],
+    "answer": "Isaac Newton"
+  },
+  {
+    "id": 24,
+    "difficulty": "hard",
+    "question": "What is the largest island in the world?",
+    "options": ["Greenland", "Madagascar", "Papua New Guinea", "Borneo"],
+    "answer": "Greenland"
+  },
+  {
+    "id": 25,
+    "difficulty": "hard",
+    "question": "Who invented the electric light bulb?",
+    "options": [
+      "Thomas Edison",
+      "Nikola Tesla",
+      "Alexander Graham Bell",
+      "James Watt"
+    ],
+    "answer": "Thomas Edison"
+  }
+]
