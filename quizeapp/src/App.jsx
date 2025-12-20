@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-[#EEF2FF] to-[#e8dbfe]">
-      <Theme />
+      {/* <Theme /> */}
 
       {screen === "start" && (
         <StartScreen
@@ -44,8 +44,6 @@ function App() {
           questionNo={questionNo}
         />
       )}
-
-      <Footer />
     </div>
   );
 }

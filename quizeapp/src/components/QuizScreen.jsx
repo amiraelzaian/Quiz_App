@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Progress from "./Progress";
 import Quiz from "./Quiz";
 import { Loader } from "lucide-react";
+import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 function shuffleArray(array) {
   const shuffled = [...array];
@@ -114,7 +116,12 @@ export default function QuizScreen({
   const currentQuestion = quizQuestions[currentIndex];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-6">
+    <motion.div
+      className="w-full flex flex-col justify-center items-center gap-6"
+      initial={{ y: -30, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.4, delay: 0.1 }}
+    >
       <Progress
         current={currentIndex + 1}
         total={quizQuestions.length}
@@ -130,6 +137,7 @@ export default function QuizScreen({
         language={language}
         timeOut={timeOut}
       />
-    </div>
+      <Footer>Challenge Yourself 💪</Footer>
+    </motion.div>
   );
 }
