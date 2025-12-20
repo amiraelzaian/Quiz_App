@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Progress from "./Progress";
 import Quiz from "./Quiz";
 import { Loader } from "lucide-react";
+
 function shuffleArray(array) {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -22,13 +23,15 @@ export default function QuizScreen({
   const [quizQuestions, setQuizQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTrue, setIsTrue] = useState(null);
-  const [timeLeft, setTimeLeft] = useState(15); // وقت لكل سؤال بالثواني
+  const [timeLeft, setTimeLeft] = useState(15);
+  const [timeOut, setTimeOut] = useState(false);
   const [isLoading, setIsloading] = useState(false);
 
   // Fetch once on mount
   useEffect(() => {
     async function getQuestionsData() {
       setIsloading(true);
+      setScore(0);
       try {
         const res = await fetch(
           language === "en" ? "/questions-en.json" : "/questions-ar.json"
@@ -39,10 +42,11 @@ export default function QuizScreen({
         setIsloading(false);
       } catch (err) {
         console.log(err.message);
+        setIsloading(false);
       }
     }
     getQuestionsData();
-  }, []);
+  }, [language]);
 
   // Filter, shuffle, select questions
   useEffect(() => {
@@ -59,31 +63,34 @@ export default function QuizScreen({
     setQuizQuestions(finalQuestions.slice(0, questionNo));
   }, [questions, difficulty, questionNo]);
 
+  // Timer effect
   useEffect(() => {
-    if (quizQuestions.length === 0) return;
+    if (quizQuestions.length === 0 || isTrue !== null) return;
 
-    setTimeLeft(15); // reset timer for each question
-    setIsTrue(null); // reset answer for new question
+    setTimeLeft(15);
+    setTimeOut(false);
 
     const timer = setInterval(() => {
       setTimeLeft((t) => {
         if (t <= 1) {
           clearInterval(timer);
-          if (isTrue === null) setIsTrue(false); // وقت انتهى → خطأ تلقائي
+          setIsTrue(false);
+          setTimeOut(true);
           return 0;
         }
         return t - 1;
       });
     }, 1000);
 
-    return () => clearInterval(timer); // cleanUp function
-  }, [currentIndex, quizQuestions]);
+    return () => clearInterval(timer);
+  }, [currentIndex, quizQuestions, isTrue]);
 
   const handleNext = () => {
     if (isTrue) {
       setScore((s) => s + 1);
     }
 
+    setTimeOut(false);
     setIsTrue(null);
 
     if (currentIndex + 1 < quizQuestions.length) {
@@ -92,6 +99,7 @@ export default function QuizScreen({
       setScreen("result");
     }
   };
+
   if (isLoading) {
     return (
       <div className="flex flex-col items-center justify-center h-[70vh] gap-4">
@@ -100,6 +108,9 @@ export default function QuizScreen({
       </div>
     );
   }
+
+  if (quizQuestions.length === 0) return null;
+
   const currentQuestion = quizQuestions[currentIndex];
 
   return (
@@ -117,6 +128,7 @@ export default function QuizScreen({
         setIsTrue={setIsTrue}
         handleNext={handleNext}
         language={language}
+        timeOut={timeOut}
       />
     </div>
   );
