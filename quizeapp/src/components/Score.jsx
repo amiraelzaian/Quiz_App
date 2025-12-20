@@ -1,6 +1,7 @@
 import { Star } from "lucide-react";
 
-export default function Score({ score, solved, total }) {
+export default function Score({ solved, total }) {
+  let score = Math.round((solved / total) * 100);
   // حساب عدد النجوم
   const stars = Math.round((score / 100) * 5);
 

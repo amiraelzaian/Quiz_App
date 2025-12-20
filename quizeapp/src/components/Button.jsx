@@ -1,6 +1,7 @@
-export default function Button({ children }) {
+export default function Button({ children, onClick }) {
   return (
     <button
+      onClick={onClick}
       type="submit"
       className="flex items-center justify-center gap-2 mt-2
         bg-linear-to-r from-blue-500 to-purple-600

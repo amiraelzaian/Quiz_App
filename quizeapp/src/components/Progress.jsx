@@ -1,6 +1,11 @@
 import TimerCounter from "./TimerCounter";
 
-export default function Progress({ current = 1, total = 10, progress = 10 }) {
+export default function Progress({
+  current = 1,
+  total = 10,
+  progress = 10,
+  time = 30,
+}) {
   // progress: 0-100 (percentage)
   return (
     <main className="w-[90%] sm:w-[80%] md:w-[60%] flex flex-col gap-2 mt-4 ">
@@ -11,13 +16,12 @@ export default function Progress({ current = 1, total = 10, progress = 10 }) {
           style={{ width: `${progress}%` }}
         ></div>
       </div>
-
       {/* Info: Question number + Timer */}
       <section className="flex justify-between items-center ">
         <p className="font-semibold text-gray-500">
           Question {current} / {total}
         </p>
-        <TimerCounter />
+        <TimerCounter time={time} />
       </section>
     </main>
   );

@@ -1,7 +1,10 @@
 import Score from "./Score";
 import Button from "./Button";
 import { RotateCcw } from "lucide-react";
-export default function ResultCard() {
+export default function ResultCard({ setScreen, questionNo, score }) {
+  function handleClick() {
+    setScreen("start");
+  }
   return (
     <main
       className="
@@ -18,9 +21,9 @@ export default function ResultCard() {
 
       <p className="text-gray-600">Good Effort 💪</p>
 
-      <Score score={50} solved={5} total={10} />
+      <Score solved={score} total={questionNo} />
 
-      <Button>
+      <Button onClick={handleClick}>
         <RotateCcw className="w-5 h-5  text-white" />
         Try Again
       </Button>
