@@ -5,13 +5,21 @@ import Theme from "./components/Theme";
 import Footer from "./components/Footer";
 import QuizScreen from "./components/QuizScreen";
 import ResultScreen from "./components/ResultScreen";
+import { useQuiz } from "./contexts/QuizContext";
 
 function App() {
-  const [screen, setScreen] = useState("start");
-  const [questionNo, setQuestioinsNo] = useState(5);
-  const [difficulty, setDifficulty] = useState("easy");
-  const [language, setLanguage] = useState("en");
-  const [score, setScore] = useState(0);
+  const {
+    screen,
+    setScreen,
+    questionNo,
+    setQuestioinsNo,
+    difficulty,
+    setDifficulty,
+    language,
+    setLanguage,
+    score,
+    setScore,
+  } = useQuiz();
 
   return (
     <div className="min-h-screen bg-linear-to-br from-[#EEF2FF] to-[#e8dbfe]">
